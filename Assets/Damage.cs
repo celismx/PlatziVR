@@ -10,24 +10,26 @@ public enum DamageType{
 public class Damage : MonoBehaviour {
     public float damage = 10.0f;
     public DamageType type = DamageType.enemy;
-    
-    private void OnCollisionEnter(Collision collision)
+
+    private void OnTriggerEnter(Collider other)
     {
-    
-        if (collision.gameObject.tag == "Player" && DamageType.player == type)
+
+        Debug.Log(other.name + " vs "+this.name);
+
+        if (other.tag == "Player" && DamageType.player == type)
             return;
 
 
-        if (collision.gameObject.GetComponent<Health>() != null)
+        if (other.GetComponent<Health>() != null)
         {
-            if (collision.gameObject.GetComponent<Health>().type != type)
+            if (other.GetComponent<Health>().type != type)
             {
                 float currentDamage = damage;
-                if(collision.gameObject.GetComponent<ChangeWeapon>()!=null &&
-                   collision.gameObject.GetComponent<ChangeWeapon>().shieldActive){
-                    currentDamage /= 2;
+                if(other.GetComponent<ChangeWeapon>()!=null &&
+                   other.GetComponent<ChangeWeapon>().shieldActive){
+                    currentDamage = 0;
                 }
-                collision.gameObject.GetComponent<Health>().HealthPoints -= currentDamage;
+                other.GetComponent<Health>().HealthPoints -= currentDamage;
             }
         }
     }

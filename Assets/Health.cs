@@ -26,6 +26,9 @@ public class Health : MonoBehaviour
         
         set
         {
+
+            Debug.Log("SU VIDA AHORA ES " + value);
+
             healthPoints = value;
             if (animator != null)
             {
@@ -33,7 +36,7 @@ public class Health : MonoBehaviour
             }
             
             if (healthPoints <= 0)
-            {
+            { 
                 GetComponent<Rigidbody>().useGravity = true;
                 if (type == DamageType.enemy)
                 {

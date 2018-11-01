@@ -18,7 +18,7 @@ public class Portal : MonoBehaviour {
             GameObject enemy = enemies[Random.Range(0, enemies.Length)];
             Instantiate(enemy, this.transform);
 
-            yield return new WaitForSeconds(Random.Range(3,5));
+            yield return new WaitForSeconds(Random.Range(9,15));
         }
     }
 }
