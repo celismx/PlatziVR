@@ -61,7 +61,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ChangeWeapon.cs" />
+    <Compile Include="Assets\Damage.cs" />
     <Compile Include="Assets\FollowDestination.cs" />
+    <Compile Include="Assets\Health.cs" />
+    <Compile Include="Assets\HealthBar.cs" />
     <Compile Include="Assets\HTC.UnityPlugin\ColliderEvent\ColliderEventCaster.cs" />
     <Compile Include="Assets\HTC.UnityPlugin\ColliderEvent\ColliderEventData.cs" />
     <Compile Include="Assets\HTC.UnityPlugin\ColliderEvent\ColliderEventInterfaces.cs" />
@@ -186,6 +190,8 @@
     <Compile Include="Assets\HTC.UnityPlugin\VRModule\VRModuleDeviceState.cs" />
     <Compile Include="Assets\HTC.UnityPlugin\VRModule\VRModuleEvent.cs" />
     <Compile Include="Assets\HTC.UnityPlugin\VRModule\VRModuleManager.cs" />
+    <Compile Include="Assets\ManaBar.cs" />
+    <Compile Include="Assets\Portal.cs" />
     <Compile Include="Assets\RainMaker\Demo\DemoScript.cs" />
     <Compile Include="Assets\RainMaker\Demo\DemoScript2D.cs" />
     <Compile Include="Assets\RainMaker\Demo\DemoScriptStartRainOnSpaceBar.cs" />
@@ -361,6 +367,7 @@
     <None Include="Assets\SteamVR\InteractionSystem\Hints\Shaders\ControllerButtonHints.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Samples\BuggyBuddy\Materials\LightCone.shader" />
     <None Include="Assets\HTC.UnityPlugin\ViveInputUtility\Resources\Unlit-AlphaWithFade.shader" />
+    <None Include="Assets\StaffOfPain\readme_first.txt" />
     <None Include="Assets\SteamVR\InteractionSystem\Teleport\Shaders\Highlight.shader" />
     <None Include="Assets\RainMaker\Prefab\RainShader.shader" />
     <None Include="Assets\HTC.UnityPlugin\ViveInputUtility\changelog.txt" />
