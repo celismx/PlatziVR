@@ -54,6 +54,9 @@ public class ChangeWeapon : MonoBehaviour {
                 currentMagic.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
                 currentMagic.GetComponent<Rigidbody>().AddForce(force,
                 ForceMode.Impulse);
+
+                currentMagic.GetComponent<AudioSource>().Play();
+
                 Invoke("LoadMagic", MAGIC_COOLDOWN_TIME);
                 
             }
